@@ -1,10 +1,15 @@
 {
   "extends": "../tsconfig.base",
   "compilerOptions": {
-    "removeComments": true
+    "removeComments": true,
+    // looks at all the files that get compiled and directs all output to a single file, making sure it's ordered properly
+    "outFile": "../js/app.js"
   },
-  "include": [
-    // look for all files ending in ts
-    "./**/*"
+  "files": [
+    "./app.ts"
   ]
+  // "include": [
+  //   // look for all files ending in ts
+  //   "./**/*"
+  // ]
 }
