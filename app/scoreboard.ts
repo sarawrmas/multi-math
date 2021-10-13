@@ -1,6 +1,6 @@
-/// <reference path="result.ts" />
+import { Result } from './result';
 
-class Scoreboard {
+export class Scoreboard {
   // array of objects that implement the Result interface
   private results: Result[] = [];
 

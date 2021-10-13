@@ -2,8 +2,10 @@
   "extends": "../tsconfig.base",
   "compilerOptions": {
     "removeComments": true,
-    // looks at all the files that get compiled and directs all output to a single file, making sure it's ordered properly
-    "outFile": "../js/app.js"
+    // specify which module format to output
+    "module": "commonjs"
+    // // looks at all the files that get compiled and directs all output to a single file, making sure it's ordered properly
+    // "outFile": "../js/app.js"
   },
   "files": [
     "./app.ts"

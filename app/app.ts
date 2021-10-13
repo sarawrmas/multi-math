@@ -1,9 +1,6 @@
-// triple slash directive
-// single line comment must appear at the very beginning of a file
-// provides additional instructions to a compiler
-// provides path to file you want to reference
-/// <reference path="player.ts" />
-/// <reference path="game.ts" />
+import { Player } from './player';
+import { Game } from './game';
+import * as Helpers from './utility';
 
 // variable to represent new game
 let newGame: Game;
@@ -14,11 +11,11 @@ document.getElementById('startGame')!.addEventListener('click', () => {
   const player: Player = new Player();
   // set new Player name to user input
   // able to call getInputValue from Utility class without creating new instance because of its static property
-  player.name = Utility.getInputValue('playername');
+  player.name = Helpers.getValue('playername');
 
   // retrieve # of problems and multiplication factor from the input boxes
-  const problemCount: number = Number(Utility.getInputValue('problemCount'));
-  const factor: number = Number(Utility.getInputValue('factor'));
+  const problemCount: number = Number(Helpers.getValue('problemCount'));
+  const factor: number = Number(Helpers.getValue('factor'));
 
   // create new Game instance and assign it to new Game variable by passing 3 values to constructor
   newGame = new Game(player, problemCount, factor);
