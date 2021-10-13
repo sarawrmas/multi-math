@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.base",
+  "compilerOptions": {
+    "removeComments": true
+  },
+  "include": [
+    // look for all files ending in ts
+    "./**/*"
+  ]
+}
